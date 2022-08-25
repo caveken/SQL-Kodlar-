@@ -11,7 +11,7 @@ _ --> Tek bir karakteri belirtir
 */
 
 -- Ismi A harfi ile baslayan personeli listele
-select * from personel WHERE isim ilike '%A%';
+select * from personel WHERE isim ilike 'A%';
 
 -- Ismi t harfi ile biten personeli listele
 select * from personel WHERE isim like '%t';

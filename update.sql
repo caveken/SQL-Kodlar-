@@ -80,3 +80,25 @@ where irtibat_ismi = 'Cin Li';
 
 select * from tedarikciler
 select * from urunler
+
+-- Urunler tablosunda laptop satin alan musterilerin ismini, firma_ismi Apple’in irtibat_isim'i ile degistirin.
+
+update urunler
+set musteri_isim = (select irtibat_ismi from tedarikciler where firma_ismi='Apple')
+where urun_isim = 'Laptop';
+
+
+-- Urunler tablosunda laptop satin alan musterilerin ismini, firma_ismi Apple’in irtibat_isim'i ile degistirin.
+
+update urunler
+set musteri_isim = (select irtibat_ismi from tedarikciler where firma_ismi='Apple')
+where urun_isim = 'Laptop';
+
+
+-- marka_id’si 101’den büyük olan marka çalişanlarinin isim, maaş ve şehirlerini listeleyiniz.
+
+SELECT isim, maas, sehir from calisanlar2
+where isyeri in (select marka_isim from markalar where marka_id>101)
+
+
+

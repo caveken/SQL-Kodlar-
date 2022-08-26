@@ -39,6 +39,8 @@ harf_sayisi int
     INSERT INTO kelimeler VALUES (1015, 'hooooot', 5);
     INSERT INTO kelimeler VALUES (1016, 'booooot', 5);
     INSERT INTO kelimeler VALUES (1017, 'bolooot', 5);
+	INSERT INTO kelimeler VALUES (1018, 'Haaak', 5);
+
 select * from kelimeler
 
 --  İçerisinde 'ot' veya 'at' bulunan kelimeleri listeleyiniz
@@ -55,6 +57,7 @@ select * from kelimeler WHERE kelime ILIKE '%at%' or kelime ILIKE '%ot%';
 select * from kelimeler WHERE kelime ~~* '%at%' or kelime ~~* '%ot%'
 --REGEX
 select * from kelimeler WHERE kelime ~* 'ot' or kelime ~* 'at'
+select * from kelimeler WHERE kelime ~* '^H[a-z,A-Z,0-9](.*)k$'
 
 
 -- 'ho' veya 'hi' ile başlayan kelimeleri listeleyeniz

@@ -18,4 +18,6 @@ INSERT INTO insanlar (ssn, adres) VALUES('567890123', 'Denizli');
 INSERT INTO insanlar (adres) VALUES('Sakarya');
 INSERT INTO insanlar (ssn) VALUES('999111222');
 
-
+select * from insanlar
+-- isim i null olanlari sorgula
+SELECT * from insanlar where isim is null

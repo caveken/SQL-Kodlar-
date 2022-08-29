@@ -37,14 +37,15 @@ select * from urunler
 -- vergi_no’su 102 olan tedarikcinin firma ismini 'Vestel' olarak güncelleyeniz.
 
 UPDATE tedarikciler
-
-SET firma_ismi = 'Vestel' WHERE vergi_no=102
+SET firma_ismi = 'Vestel' 
+WHERE vergi_no=102
 
 
 -- vergi_no’su 101 olan tedarikçinin firma ismini 'casper' ve irtibat_ismi’ni 'Ali Veli' olarak güncelleyiniz.
 
 UPDATE tedarikciler
-set firma_ismi = 'casper', irtibat_ismi = 'Ali Veli' where vergi_no =101;
+set firma_ismi = 'casper', irtibat_ismi = 'Ali Veli' 
+where vergi_no =101;
 
 
 --  urunler tablosundaki 'Phone' değerlerini 'Telefon' olarak güncelleyiniz.
@@ -56,7 +57,8 @@ WHERE urun_isim = 'Phone'
 
 --  urunler tablosundaki urun_id değeri 1004'ten büyük olanların urun_id’sini 1 arttırın.
 UPDATE urunler
-SET urun_id = urun_id+1 where urun_id > 1004
+SET urun_id = urun_id+1 
+where urun_id > 1004
 
 
 -- urunler tablosundaki tüm ürünlerin urun_id değerini ted_vergino sutun değerleri ile toplayarak güncelleyiniz.

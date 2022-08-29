@@ -80,8 +80,11 @@ INSERT INTO notlar VALUES ('126', 'Matematik',90);
 
 SELECT * FROM notlar;
 
-delete from notlar WHERE talebe_id='123';
-delete from talebeler WHERE id='126';-- on delete cascade kullandığımız için parenttan direk silebildik
+delete from notlar 
+WHERE talebe_id='123';
+
+delete from talebeler 
+WHERE id='126';-- on delete cascade kullandığımız için parenttan direk silebildik
 
 DROP table talebeler CASCADE; -- Parent tabloyu kaldırmak istersek Drop table tablo_adı'ndan sonra 
 --CASCADE komutunu kullanırız
@@ -132,8 +135,10 @@ alter table ogrenciler DROP CONSTRAINT pk_id;
 
 alter TABLE ogrenci_adres DROP CONSTRAINT ogrenci_adres_id_fkey;
 
-SELECT * from talebeler WHERE yazili_notu>85;
+SELECT * from talebeler 
+WHERE yazili_notu>85;
 
 --ismi mustafa bak olan talebenin tüm bilgileri
-SELECT * from talebeler where isim='Mustafa Bak';
+SELECT * from talebeler 
+where isim='Mustafa Bak';
 

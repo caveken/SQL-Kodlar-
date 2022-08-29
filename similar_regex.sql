@@ -63,11 +63,14 @@ select * from kelimeler WHERE kelime ~* '^H[a-z,A-Z,0-9](.*)k$'
 -- 'ho' veya 'hi' ile başlayan kelimeleri listeleyeniz
 
 --SIMILAR TO ile
-select * from kelimeler where kelime similar to 'ho%|hi%'
+select * from kelimeler 
+where kelime similar to 'ho%|hi%'
 --LIKE ile
-select * from kelimeler where kelime ~~* 'ho%' or kelime ~~*'hi%'
+select * from kelimeler 
+where kelime ~~* 'ho%' or kelime ~~*'hi%'
 --REGEX ile
-select * from kelimeler where kelime ~* 'h[oi](.*)' 
+select * from kelimeler 
+where kelime ~* 'h[oi](.*)' 
 -- Regex'de bir karakter için köşeli parantez kullanılır. 
 -- [oi] o veya i harfi anlamında tek karakter gösterir
 -- Regex'te .(nokta) bir karakteri temsil eder"
@@ -79,9 +82,11 @@ select * from kelimeler where kelime ~* 'h[oi](.*)'
 --Sonu 't' veya 'm' ile bitenleri listeleyeniz
 
 --SIMILAR TO ile
-select * from kelimeler where kelime similar to '%t|%m';
+select * from kelimeler 
+where kelime similar to '%t|%m';
 --REGEX ile
-select * from kelimeler where kelime ~* '(.*)[tm]$' 
+select * from kelimeler 
+where kelime ~* '(.*)[tm]$' 
 -- $ karakteri bitişi gösterir
 
 
